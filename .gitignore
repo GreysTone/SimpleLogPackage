@@ -1,0 +1,5 @@
+# IDE
+.idea
+
+# Object File
+*.o
