@@ -35,10 +35,10 @@ protected:
 	std::string identifier;
 	std::string logfile;
 public:
-	GTGeneralLogSystem(std::string identifier);
+	GTGeneralLogSystem(const std::string identifier);
 
-	void setLogType(GT_GLS_LogType t);
-	void log(std::string msg, std::string func);
+	const void setLogType(GT_GLS_LogType t);
+	const void log(const std::string msg, const std::string func);
 
 };
 

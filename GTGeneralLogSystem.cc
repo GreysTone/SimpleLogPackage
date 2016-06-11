@@ -21,16 +21,16 @@
 
 namespace _GT_GENERAL_LOG_SYSTEM_ {
 
-GTGeneralLogSystem::GTGeneralLogSystem(std::string id) {
+GTGeneralLogSystem::GTGeneralLogSystem(const std::string id) {
 	identifier = id;
 	logType = GT_GLS_LogType::GT_GLS_LT_CLOSED;
 }
 
-void GTGeneralLogSystem::setLogType(GT_GLS_LogType t) {
+const void GTGeneralLogSystem::setLogType(GT_GLS_LogType t) {
 	logType = t;
 }
 
-void GTGeneralLogSystem::log(std::string msg, std::string func) {
+const void GTGeneralLogSystem::log(const std::string msg, const std::string func) {
 	switch (logType) {
 		case GT_GLS_LogType::GT_GLS_LT_CLOSED: {
 			std::cerr << "GT_GLS Closed." << std::endl;
