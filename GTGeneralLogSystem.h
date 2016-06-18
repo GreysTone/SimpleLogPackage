@@ -20,6 +20,7 @@
 
 #include <string>
 #include <iostream>
+#include <fstream>
 
 namespace _GT_GENERAL_LOG_SYSTEM_ {
 
@@ -33,11 +34,12 @@ class GTGeneralLogSystem {
 	GT_GLS_LogType logType;
 protected:
 	std::string identifier;
-	std::string logfile;
+	std::ofstream *logFile;
 public:
 	GTGeneralLogSystem(const std::string identifier);
 
-	const void setLogType(GT_GLS_LogType t);
+	const void setLogType(const GT_GLS_LogType t);
+	const void setLogFile(const std::string f);
 	const void log(const std::string msg, const std::string func);
 
 };
