@@ -24,21 +24,21 @@
 
 namespace _GT_GENERAL_LOG_SYSTEM_ {
 
-enum class GT_GLS_LogType {
-	GT_GLS_LT_CLOSED,
-	GT_GLS_LT_STANDARD,
-	GT_GLS_LT_OUTSIDE,
+enum class LogType {
+	CLOSED,
+	STANDARD,
+	OUTSIDE,
 };
 
 class GTGeneralLogSystem {
-	GT_GLS_LogType logType;
+	LogType logType;
 protected:
 	std::string identifier;
 	std::ofstream *logFile;
 public:
 	GTGeneralLogSystem(const std::string identifier);
 
-	const void setLogType(const GT_GLS_LogType t);
+	const void setLogType(const LogType t);
 	const void setLogFile(const std::string f);
 	const void log(const std::string msg, const std::string func);
 
