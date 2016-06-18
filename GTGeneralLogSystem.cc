@@ -26,20 +26,22 @@ GTGeneralLogSystem::GTGeneralLogSystem(const std::string id) {
 	logFile = NULL;
 }
 
+GTGeneralLogSystem::~GTGeneralLogSystem() {
+	if(logFile) logFile->close();
+}
+
 const void GTGeneralLogSystem::setLogFile(const std::string f) {
 	logFile = new std::ofstream(f);
 }
 
 const void GTGeneralLogSystem::setLogType(const LogType t) {
 	logType = t;
+	if(logType == LogType::CLOSED) std::cerr << "GT_GLS closed." << std::endl;
 }
 
 const void GTGeneralLogSystem::log(const std::string msg, const std::string func) {
 	switch (logType) {
-		case LogType::CLOSED: {
-			std::cerr << "GT_GLS Closed." << std::endl;
-			break;
-		}
+		case LogType::CLOSED: { break; }
 		case LogType::STANDARD: {
 			std::cerr << "[" << identifier << "]<" << func << "> raised: " << msg << std::endl;
 			break;

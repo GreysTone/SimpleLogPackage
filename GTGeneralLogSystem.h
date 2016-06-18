@@ -37,6 +37,7 @@ protected:
 	std::ofstream *logFile;
 public:
 	GTGeneralLogSystem(const std::string identifier);
+	~GTGeneralLogSystem();
 
 	const void setLogType(const LogType t);
 	const void setLogFile(const std::string f);
