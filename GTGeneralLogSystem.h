@@ -27,7 +27,7 @@ namespace _GT_GENERAL_LOG_SYSTEM_ {
 enum class GT_GLS_LogType {
 	GT_GLS_LT_CLOSED,
 	GT_GLS_LT_STANDARD,
-	GT_GLS_LT_OUTSIDEFILE,
+	GT_GLS_LT_OUTSIDE,
 };
 
 class GTGeneralLogSystem {

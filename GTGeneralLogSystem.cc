@@ -44,7 +44,7 @@ const void GTGeneralLogSystem::log(const std::string msg, const std::string func
 			std::cerr << "[" << identifier << "]<" << func << "> raised: " << msg << std::endl;
 			break;
 		}
-		case GT_GLS_LogType::GT_GLS_LT_OUTSIDEFILE: {
+		case GT_GLS_LogType::GT_GLS_LT_OUTSIDE: {
 			if(logFile) {
 				(*logFile) << "[" << identifier << "]<" << func << "> raised: " << msg << std::endl;
 			}
