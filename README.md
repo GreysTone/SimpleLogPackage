@@ -4,3 +4,4 @@
 
 ******
 
+* For dynamic library, copy the file to ```/usr/local/lib/```
